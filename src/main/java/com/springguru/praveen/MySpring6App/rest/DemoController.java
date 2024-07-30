@@ -3,6 +3,7 @@ package com.springguru.praveen.MySpring6App.rest;
 
 import com.springguru.praveen.MySpring6App.service.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,16 +22,17 @@ public class DemoController {
 
     //Constructor Injection Example
     //Autowired not needed here if there is only one constructor
-//    @Autowired
-//    public DemoController(Coach myCoach) {
-//        this.myCoach = myCoach;
-//    }
-
-    //Setter Injection Example
+    //Qualifier({beanNameWithFirstCharacterLowerCase})
     @Autowired
-    public void setMyCoach(Coach myCoach) {
+    public DemoController(@Qualifier("cricketCoach") Coach myCoach) {
         this.myCoach = myCoach;
     }
+
+    //Setter Injection Example
+//    @Autowired
+//    public void setMyCoach(Coach myCoach) {
+//        this.myCoach = myCoach;
+//    }
 
     //Injection With Any method name
 //    @Autowired
