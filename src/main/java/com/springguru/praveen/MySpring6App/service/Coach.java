@@ -1,4 +1,4 @@
-package com.springguru.praveen.util.service;
+package com.springguru.praveen.MySpring6App.service;
 
 public interface Coach {
 
