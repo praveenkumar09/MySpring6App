@@ -23,8 +23,9 @@ public class DemoController {
     //Constructor Injection Example
     //Autowired not needed here if there is only one constructor
     //Qualifier({beanNameWithFirstCharacterLowerCase})
+    //Qualifier has higher priority than the Primary
     @Autowired
-    public DemoController(@Qualifier("cricketCoach") Coach myCoach) {
+    public DemoController(Coach myCoach) {
         this.myCoach = myCoach;
     }
 
