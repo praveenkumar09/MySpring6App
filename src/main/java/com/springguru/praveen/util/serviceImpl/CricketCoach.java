@@ -1,6 +1,6 @@
-package com.springguru.praveen.MySpring6App.serviceImpl;
+package com.springguru.praveen.util.serviceImpl;
 
-import com.springguru.praveen.MySpring6App.service.Coach;
+import com.springguru.praveen.util.service.Coach;
 import org.springframework.stereotype.Component;
 
 

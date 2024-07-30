@@ -1,7 +1,7 @@
 package com.springguru.praveen.MySpring6App.rest;
 
 
-import com.springguru.praveen.MySpring6App.service.Coach;
+import com.springguru.praveen.util.service.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
