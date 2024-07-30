@@ -27,16 +27,16 @@ public class DemoController {
 //    }
 
     //Setter Injection Example
-//    @Autowired
-//    public void setMyCoach(Coach myCoach) {
-//        this.myCoach = myCoach;
-//    }
+    @Autowired
+    public void setMyCoach(Coach myCoach) {
+        this.myCoach = myCoach;
+    }
 
     //Injection With Any method name
-    @Autowired
-    public void methodToSetCoach(Coach coach) {
-        this.myCoach = coach;
-    }
+//    @Autowired
+//    public void methodToSetCoach(Coach coach) {
+//        this.myCoach = coach;
+//    }
 
     // expose "/" than return Hello World
     @GetMapping("/")
