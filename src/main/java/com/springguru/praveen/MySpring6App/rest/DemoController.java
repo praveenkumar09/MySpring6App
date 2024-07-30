@@ -19,8 +19,16 @@ public class DemoController {
 
     private Coach myCoach;
 
+    //Constructor Injection Example
+    //Autowired not needed here if there is only one constructor
+//    @Autowired
+//    public DemoController(Coach myCoach) {
+//        this.myCoach = myCoach;
+//    }
+
+    //Setter Injection Example
     @Autowired
-    public DemoController(Coach myCoach) {
+    public void setMyCoach(Coach myCoach) {
         this.myCoach = myCoach;
     }
 
