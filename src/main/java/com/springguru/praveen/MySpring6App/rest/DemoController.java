@@ -25,7 +25,7 @@ public class DemoController {
     //Qualifier({beanNameWithFirstCharacterLowerCase})
     //Qualifier has higher priority than the Primary
     @Autowired
-    public DemoController(Coach myCoach) {
+    public DemoController(@Qualifier("swimCoach") Coach myCoach) {
         System.out.println("In Constructor :"+ getClass().getSimpleName());
         this.myCoach = myCoach;
     }
