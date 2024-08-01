@@ -20,14 +20,17 @@ public class DemoController {
 
     private Coach myCoach;
 
+    private Coach anotherCoach;
+
     //Constructor Injection Example
     //Autowired not needed here if there is only one constructor
     //Qualifier({beanNameWithFirstCharacterLowerCase})
     //Qualifier has higher priority than the Primary
     @Autowired
-    public DemoController(Coach myCoach) {
+    public DemoController(Coach myCoach,Coach anotherCoach) {
         System.out.println("In Constructor :"+ getClass().getSimpleName());
         this.myCoach = myCoach;
+        this.anotherCoach = anotherCoach;
     }
 
     //Setter Injection Example
@@ -73,6 +76,11 @@ public class DemoController {
     @GetMapping("/getDailyWorkout")
     public String getDailyWorkout(){
         return myCoach.getDailyWorkout();
+    }
+
+    @GetMapping("/check")
+    public String check(){
+        return "Comparing beans: myCoach == anotherCoach"+ (myCoach == anotherCoach);
     }
 
 
